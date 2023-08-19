@@ -76,7 +76,7 @@ function App() {
       <MiOrg cambiarMostrar={cambiarMostrar} />
       {opciones.map((equipo) => (
         <Equipo datos={equipo} key={equipo.titulo}
-        colaboradores={colaboradores.filter(colaborador => colaborador.Equipo == equipo.titulo)} 
+        colaboradores={colaboradores.filter(colaborador => colaborador.Equipo === equipo.titulo)} 
         />
       ))}
 
