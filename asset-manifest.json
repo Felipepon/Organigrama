@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Organigrama/static/css/main.7664529f.css",
+    "main.js": "/Organigrama/static/js/main.5d1ef634.js",
+    "static/js/787.b790015c.chunk.js": "/Organigrama/static/js/787.b790015c.chunk.js",
+    "index.html": "/Organigrama/index.html",
+    "main.7664529f.css.map": "/Organigrama/static/css/main.7664529f.css.map",
+    "main.5d1ef634.js.map": "/Organigrama/static/js/main.5d1ef634.js.map",
+    "787.b790015c.chunk.js.map": "/Organigrama/static/js/787.b790015c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7664529f.css",
+    "static/js/main.5d1ef634.js"
+  ]
+}
