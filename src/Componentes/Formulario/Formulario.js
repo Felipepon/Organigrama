@@ -9,8 +9,10 @@ const Formulario = (props) =>{
     const [Puesto,actualizarPuesto] =useState("")
     const [Foto,actualizarFoto] =useState("")
     const [Equipo,actualizarEquipo]=useState("")
+    const [titulo, actualizarTitulo] = useState("")
+    const [color, actualizarColor] = useState("")
 
-    const{registrarColaborador} = props
+    const{registrarColaborador, crearEquipo} = props
 
     const manejarEnvio = (evento) =>{
         evento.preventDefault()
@@ -22,6 +24,11 @@ const Formulario = (props) =>{
     
         }
         registrarColaborador(datosEnviar)
+    }
+
+    const manejarEquipo = (evento) =>{
+        evento.preventDefault()
+        crearEquipo({titulo, colorPrimario: color})
     }
 
     
@@ -59,6 +66,28 @@ const Formulario = (props) =>{
                 Crear
             </Boton>
         </form>
+        <form onSubmit={manejarEquipo} >
+            <h2>Rellena el formulario para crear un nuevo equipo.</h2>
+            <Campo 
+            titulo="Titulo" 
+            placeholder="Ingresar titulo" 
+            required 
+            valor={titulo} 
+            actualizarValor={actualizarTitulo} 
+            />
+            <Campo 
+            titulo="Color" 
+            placeholder="Ingresar color" 
+            required
+            valor={color}
+            actualizarValor={actualizarColor}
+            type="color"
+            />
+            <Boton>
+                Crear equipo
+            </Boton>
+        </form>
+
     </section>
 }
 export default Formulario
